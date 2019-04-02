@@ -7355,20 +7355,21 @@ int init_nvram(void)
 
 		/* gpio */
 		/* HW reset, 2 | LOW */
-		nvram_set_int("led_pwr_gpio", 3|GPIO_ACTIVE_LOW);
-		nvram_set_int("btn_led_gpio", 4);	// active high(on)
-		nvram_set_int("led_wan_gpio", 5);
+		nvram_set_int("btn_rst_gpio", 3|GPIO_ACTIVE_LOW);
+		//nvram_set_int("led_pwr_gpio", 3|GPIO_ACTIVE_LOW);
+		//nvram_set_int("btn_led_gpio", 4);	// active high(on)
+		//nvram_set_int("led_wan_gpio", 5);
 		/* MDC_4709 RGMII, 6 */
 		/* MDIO_4709 RGMII, 7 */
-		nvram_set_int("pwr_usb_gpio", 9|GPIO_ACTIVE_LOW);
-		nvram_set_int("reset_switch_gpio", 10);
-		nvram_set_int("btn_rst_gpio", 11|GPIO_ACTIVE_LOW);
+		//nvram_set_int("pwr_usb_gpio", 9|GPIO_ACTIVE_LOW);
+		//nvram_set_int("reset_switch_gpio", 10);
+		//nvram_set_int("btn_rst_gpio", 11|GPIO_ACTIVE_LOW);
 		/* UART1_RX,  12 */
 		/* UART1_TX,  13 */
 		/* UART1_CTS, 14*/
 		/* UART1_RTS, 15 */
-		nvram_set_int("led_usb_gpio", 16|GPIO_ACTIVE_LOW);
-		nvram_set_int("led_usb3_gpio", 17|GPIO_ACTIVE_LOW);
+		//nvram_set_int("led_usb_gpio", 16|GPIO_ACTIVE_LOW);
+		//nvram_set_int("led_usb3_gpio", 17|GPIO_ACTIVE_LOW);
 		//nvram_set_int("led_mmc_gpio",  17|GPIO_ACTIVE_LOW);	/* abort */
 		nvram_set_int("led_wps_gpio", 19|GPIO_ACTIVE_LOW);
 		if(model == MODEL_RTAC5300) {
@@ -7377,10 +7378,12 @@ int init_nvram(void)
 			nvram_set_int("fan_gpio", 15);
 			nvram_set_int("rpm_fan_gpio", 14|GPIO_ACTIVE_LOW);
 		} else {
-			nvram_set_int("btn_wltog_gpio", 18|GPIO_ACTIVE_LOW);
-			nvram_set_int("btn_wps_gpio", 20|GPIO_ACTIVE_LOW);
+			nvram_set_int("btn_wps_gpio", 17|GPIO_ACTIVE_LOW);
+		//	nvram_set_int("btn_wltog_gpio", 18|GPIO_ACTIVE_LOW);
+		//	nvram_set_int("btn_wps_gpio", 20|GPIO_ACTIVE_LOW);
 		}
-		nvram_set_int("led_lan_gpio", 21|GPIO_ACTIVE_LOW);	/* FAN CTRL: reserved */
+		nvram_set_int("pwr_usb_gpio", 21|GPIO_ACTIVE_LOW);
+		//nvram_set_int("led_lan_gpio", 21|GPIO_ACTIVE_LOW);	/* FAN CTRL: reserved */
 		/* PA 5V/3.3V switch, 22 */
 		/* SDIO_EN_1P8, 23 | HIGH */
 
